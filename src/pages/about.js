@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 
 const AboutPage = () => (
     <Layout>
-        <div style={{ color: 'teal' }}>
+        <div style={{ color: 'red' }}>
             <h1>About Gatsby</h1>
             <p>Such wow. Very React</p>
             <Link to="/">Go to the front page</Link>
