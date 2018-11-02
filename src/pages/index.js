@@ -11,6 +11,17 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <div>
+        <h1>My WordPress Blog</h1>
+        <h4>Posts</h4>
+        {data.allWordpressPost.edges.map(({ node }) => (
+          <div>
+            <p>{node.title}</p>
+            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          </div>
+        ))}
+      </div>
+      <br />
+      <div>
         <h1 className={css`
             display: inline-block;
             border-bottom: 1px solid red;
@@ -74,6 +85,16 @@ export const query = graphql`
         }
       }
     }
+    allWordpressPost(sort: { fields: [date] }) {
+      edges {
+        node {
+          title
+          excerpt
+          slug
+        }
+      }
+    }
+
   }
 `;
 
