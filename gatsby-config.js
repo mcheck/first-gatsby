@@ -73,14 +73,15 @@ module.exports = {
         ],
         // Blacklisted routes using glob patterns
         excludedRoutes: [
-          // '/*/*/jetpack',
-          // '/*/*/pages',
-          // '/*/*/media',
-          // '/*/*/tags',
-          // '/*/*/taxonomies',
-          // '/*/*/users',
-          // '/*/*/categories',
-          // '/*/*/comments',
+          '/*/*/jetpack',
+          '/*/*/pages',
+          '/*/*/media',
+          '/*/*/tags',
+          '/*/*/taxonomies',
+          '/*/*/users',
+          '/*/*/categories',
+          '/*/*/comments',
+          '/*/*/yoast',
         ],
         // use a custom normalizer which is applied after the built-in ones.
         // normalizer: function ({ entities }) {
